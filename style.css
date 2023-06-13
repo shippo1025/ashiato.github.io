@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+h1 {
+
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    background-image:linear-gradient(transparent 60%, #7df8e2 50%);
+    padding-bottom: .25rem;
+    
+}
+.post-img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius:55% 45% 37% 63% / 53% 30% 70% 47%;
+}
+ul li::before {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f004";
+    color: #f66;
+  }
+  
