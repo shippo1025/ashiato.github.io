@@ -1,0 +1,524 @@
+@charset "UTF-8";
+
+html {
+    scroll-padding-top: 88px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 16px;
+    color: #4B4240;
+    line-height: 160%;
+    background-color: #FBFBFB;
+}
+
+.innerWrap {
+    width: 980px;
+    margin: 0 auto;
+}
+
+/* 共通部分
+-------------------------------------------------------------------- */
+/* ボタン */
+.roundbutton a {
+    background: #4B4240;
+    border-radius: 80px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 280px;
+    padding: 15px 25px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.roundbutton a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 2rem;
+    font-size: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s;
+    width: 6px;
+    height: 6px;
+    border-top: solid 2px currentColor;
+    border-right: solid 2px currentColor;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.roundbutton a:hover {
+    background: #9d9d9d;
+    color: #fff;
+}
+
+.roundbutton a:hover:after {
+    right: 1.4rem;
+}
+
+
+
+
+
+/* header
+-------------------------------------------------------------------- */
+header {
+    height: 124px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: background 0.2s;
+    background-color: #FBFBFB;
+}
+
+.headerScroll {
+    background: linear-gradient(rgba(251, 251, 251, 0.95) 45%, rgba(251, 251, 251, 0) 100%);
+    height: 150px;
+}
+
+/* nav */
+nav {
+    font-family: "fot-tsukubrdgothic-std", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+
+}
+
+
+h1 img {
+    padding-top: 16px;
+    filter: drop-shadow(0 0 40px rgb(251, 251, 251));
+}
+
+#heroArea img {
+    padding-top: 128px;
+}
+
+.innerWrap nav {
+    width: 980px;
+    display: flex;
+}
+
+nav ul {
+    width: 100%;
+    padding: 16px 0 0 48px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+nav ul li a {
+    display: block;
+
+}
+
+nav ul li a:hover {
+    padding-bottom: 8px;
+    border-bottom: solid 8px #E3B764;
+}
+
+
+nav ul li span {
+    display: flex;
+    letter-spacing: 0.11rem;
+    padding-top: 16px;
+}
+
+nav ul li span img {
+    margin: auto;
+}
+
+
+
+/* main 
+-------------------------------------------------------------------- */
+#heroArea {
+    width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#heroArea img {
+    width: 980px;
+}
+
+h2 {
+    color: #4B4240;
+
+    text-align: center;
+    font-family: "fot-tsukubrdgothic-std", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 135%;
+}
+
+/* 私について */
+#aboutArea {
+    padding: 80px 0 64px;
+}
+
+#aboutArea>.innerWrap {
+    display: flex;
+}
+
+#aboutArea>.innerWrap>img {
+    margin-right: 40px;
+    height: 100%;
+}
+
+#aboutArea>.innerWrap>div>p {
+    padding-bottom: 56px;
+}
+
+.aboutme {
+    text-align-last: left;
+    padding-bottom: 8px;
+    padding-left: 200px;
+}
+
+#aboutArea>.innerWrap>div>.roundbutton {
+    padding-left: 130px;
+}
+
+/* デザイン */
+#designArea {
+    padding-bottom: 64px;
+    background-image: url(../img/dansa.png), url(../img/hougan.png);
+    background-repeat: repeat-x, repeat;
+    background-position: top center, top center;
+}
+
+.illustDesign {
+    padding: 64px 0 64px;
+    background-image: url(../img/line.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.illustDesign>span {
+    background-color: #FBFBFB;
+    padding: 16px;
+}
+
+#designArea>.innerWrap>.roundbutton a {
+    margin: 0 auto;
+}
+
+/* ▼ ポートフォリオアイテム */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 320px;
+    grid-gap: 40px;
+    padding-bottom: 80px;
+}
+
+.item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+    /* ポートフォリオアイテムの高さを指定 */
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.item span {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    /* 光彩 */
+    text-shadow: 2px 2px 10px #fff,
+        -2px 2px 10px #fff,
+        2px -2px 10px #fff,
+        -2px -2px 10px #fff;
+    letter-spacing: 1.25px;
+}
+
+/* ▲ ポートフォリオアイテム */
+
+
+/* イラスト */
+#illustArea {
+    padding-bottom: 64px;
+    background-image: url(../img/dansa.png);
+    background-repeat: repeat-x;
+    background-position: top center;
+}
+
+#illustArea>.innerWrap>.roundbutton a {
+    margin: 0 auto;
+}
+
+/* Youtubeチャンネル「ポチワン家」 */
+#youtubeArea {
+    background-color: #F7F4F1;
+    padding-bottom: 64px;
+    background-image: url(../img/dansa.png);
+    background-repeat: repeat-x;
+    background-position: top center;
+}
+
+.youtube {
+    padding: 64px 0 18px 50px;
+    background-image: url(../img/start_mark.png);
+    background-repeat: no-repeat;
+    background-position: 300px 53px;
+}
+
+#youtubeArea .innerWrap p {
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+.thumbnail {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.thumbnail iframe {
+    margin: 0 auto;
+    /* 幅を可変にする */
+    aspect-ratio: 16/9;
+    /* アスペクト比を設定 */
+}
+
+/* ▼ 動画サムネ */
+
+
+/* お問い合わせ */
+#contactArea {
+    padding-bottom: 64px;
+    background-image: url(../img/dansa.png);
+    background-repeat: repeat-x;
+    background-position: top center;
+}
+
+.contact {
+    padding: 64px 0 24px;
+
+}
+
+/*フォーム*/
+form div {
+    padding-bottom: 14px;
+}
+
+label {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background: #E9E0D6;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    max-width: 480px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 480px;
+    height: 6rem;
+}
+
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+
+}
+
+form {
+    background-image: url(../img/letter.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* 送信ボタン */
+.roundbutton_form {
+    background: #4B4240;
+    border-radius: 80px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 280px;
+    padding: 15px 25px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.roundbutton_form:hover {
+    background: #9d9d9d;
+
+}
+
+/* footer
+-------------------------------------------------------------------- */
+footer {
+    background-color: #4B4240;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+}
+
+/* ======================================================================
+    SP
+====================================================================== */
+
+@media screen and (max-width: 640px) {
+    html {
+        scroll-padding-top: 16px;
+    }
+
+    header {
+        height: 0px;
+        position: static;
+    }
+
+    /* 共通部分 */
+    .innerWrap,
+    .innerWrap nav,
+    header nav ul,
+    form {
+        width: 100%;
+    }
+
+
+
+    nav ul {
+        display: none;
+    }
+
+    #heroArea,
+    #aboutArea {
+        width: 100%;
+    }
+
+    /*  main
+====================================================================== */
+    /* ヒーローイメージ */
+    #heroArea {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #heroArea img {
+        transform: translate(-48%, -5%) scale(0.95);
+    }
+
+    h1 {
+        padding: 8px 0 0 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    /* 私について */
+    #aboutArea {
+        padding: 0 0 48px 0;
+    }
+
+    #aboutArea>.innerWrap {
+        flex-direction: column;
+    }
+
+    .innerWrap div .aboutme {
+        padding: 0 120px 0 125px;
+
+    }
+
+    #aboutArea .innerWrap>img {
+        display: none;
+    }
+
+    #aboutArea>.innerWrap>div>p {
+        padding: 8px 16px 32px 16px;
+        text-align: center;
+    }
+
+    #aboutArea>.innerWrap>div>.roundbutton {
+        padding-left: 50px;
+        padding-bottom: 32px;
+    }
+
+    /* デザイン */
+    /* イラスト */
+    /* ▼ ポートフォリオアイテム */
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 16px;
+        padding: 0 16px 80px 16px;
+    }
+
+    /* ▲ ポートフォリオアイテム */
+    /* 動画 */
+    .youtube {
+        padding: 64px 0 18px 50px;
+        background-image: url(../img/start_mark.png);
+        background-repeat: no-repeat;
+        background-position: 38px 63px;
+        background-size: 15% auto;
+        /* 幅を50%、高さを自動で拡大縮小 */
+    }
+
+    /* お問い合わせ */
+    #contactArea {
+        padding: 16px 16px 64px 16px;
+        /* background-image: url(../img/dansa.png);
+    background-repeat: repeat-x;
+    background-position: top center; */
+    }
+
+    form {
+        background-image: none;
+        /* 背景画像を非表示にする */
+    }
+
+    input[type="submit"] {
+        border: none;
+        cursor: pointer;
+        line-height: 1;
+        margin: 0 auto;
+
+    }
+
+
+}
